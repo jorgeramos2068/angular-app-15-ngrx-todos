@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { TodoPageComponent } from './pages/todo-page/todo-page.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
@@ -15,7 +16,7 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
     TodoListComponent,
     TodoPageComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   exports: [TodoPageComponent],
 })
 export class TodosModule {}
