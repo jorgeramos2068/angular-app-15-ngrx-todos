@@ -45,4 +45,8 @@ export class TodoItemComponent implements OnInit {
       actions.editTodo({ id: this.todo.id, text: this.txtInput.value })
     );
   }
+
+  delete(): void {
+    this.store.dispatch(actions.deleteTodo({ id: this.todo.id }));
+  }
 }
