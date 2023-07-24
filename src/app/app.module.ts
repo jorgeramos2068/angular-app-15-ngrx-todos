@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { todoReducer } from './todos/todo.reducer';
+import { appReducer } from './app.reducer';
 
 import { environment } from 'src/environments/environment';
 import { SharedModule } from './shared/shared.module';
@@ -16,7 +16,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     TodosModule,
     SharedModule,
-    StoreModule.forRoot({ todos: todoReducer }),
+    StoreModule.forRoot(appReducer),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
