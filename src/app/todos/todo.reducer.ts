@@ -22,6 +22,17 @@ const _todoReducer = createReducer(
       }
       return todo;
     });
+  }),
+  on(actions.editTodo, (state, { id, text }) => {
+    return state.map((todo) => {
+      if (todo.id === id) {
+        return {
+          ...todo,
+          text,
+        };
+      }
+      return todo;
+    });
   })
 );
 
