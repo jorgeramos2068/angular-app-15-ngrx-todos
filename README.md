@@ -1,4 +1,6 @@
-# Todoapp
+# TodoApp
+
+Angular application which uses NgRx to manage a list of tasks to be done.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
 
