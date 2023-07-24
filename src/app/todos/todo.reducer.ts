@@ -44,6 +44,9 @@ const _todoReducer = createReducer(
         completed: allCompleted,
       };
     })
+  ),
+  on(actions.deleteCompleted, (state) =>
+    state.filter((todo) => !todo.completed)
   )
 );
 
